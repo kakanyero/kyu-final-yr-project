@@ -44,8 +44,11 @@
                 <li><a href="about.html">About</a></li>
                 <li><a  href="contact.html">Contact</a></li>
                 <li id="lg-bag">
-                    <a class="active" href="cart.php">Cart<i class="bi bi-cart-fill"></i></a>
+                    <a class="active" href="cart.php">Cart<i style="font-size: 1.5rem; color: orange" class="bi bi-cart-fill"></i></a>
                 </li>
+                <li id="lg-bag">
+        <a href="signout.php"><i style="font-size: 2rem" class="bi bi-box-arrow-right"></i></a>
+        </li>
                 <a href="#" id="close"><i class="bi bi-x-circle"></i></a>
             </ul>
         </nav>

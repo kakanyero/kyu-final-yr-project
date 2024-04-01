@@ -32,11 +32,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - E-Commerce</title>
-    <link rel="stylesheet" href="css/login.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login - E-Commerce</title>
+        <link rel="stylesheet" href="css/login.css">
+
+        <!-- Prevent back button/arrow in browser after auth -->
+        <script type="text/javascript">
+            window.history.forward(-1);
+        </script>
     </head>
 
 <body>

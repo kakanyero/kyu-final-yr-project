@@ -31,6 +31,10 @@
     <link rel="stylesheet" href="css/custom_styles.css">
     <!-- bootstrap icons -->
     <link rel="stylesheet" href="css/bootstrap-icons/bootstrap-icons.css">
+
+    <script type="text/javascript">
+            window.history.forward(-1);
+        </script>
     
 </head>
 
@@ -45,6 +49,12 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li id="lg-bag"><a href="cart.php">Cart<i class="bi bi-cart-fill"></i></a></li>
+                <?php if(isset($_SESSION['auth'])){?>
+                    <li id="lg-bag">
+                        <a href="signout.php"><i style="font-size: 2rem" class="bi bi-box-arrow-right"></i></a>
+                    </li>
+        <?php }?>
+
                 <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
             </ul>
         </nav>
