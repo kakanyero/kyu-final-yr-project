@@ -36,7 +36,7 @@ input {
     color: white;
 }
 
-button {
+#signupButton {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
@@ -47,8 +47,9 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #45505E;
+#signupButton:hover {
+    background-color: teal;
+    color: white;
 }
 
 #login-link {
