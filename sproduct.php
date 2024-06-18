@@ -1,3 +1,31 @@
+<?php 
+  session_start();
+  // Including connection to the database file
+  include("database/config.php");
+  // Get product Id from the browser
+  $selectedProductId = $_GET['productId'];
+
+  // Test if the id is captured when an item is selected
+
+  // if(empty($selectedProductId)){
+  //   echo "Empty Id";
+  // }else{
+  //   echo "selected Id is: ". $selectedProductId;
+  // }
+
+  // Get selected item details
+  $selected_item_query = "SELECT * FROM products WHERE productId = '$selectedProductId' limit 1 ";
+  $selected_item_query_run = mysqli_query($conn, $selected_item_query);
+  $selected_product = mysqli_fetch_array($selected_item_query_run);
+
+  // Featured products
+  $ft_query = "SELECT* FROM products LIMIT 4";
+  $ft_query_run = mysqli_query($conn, $ft_query);
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <!-- =================================================================================== -->
@@ -14,7 +42,8 @@
   <!-- <link rel="stylesheet" href="css/all.min.css" /> -->
   <!-- Css -->
   <link rel="stylesheet" href="css/style.css" />
-  <!--  -->
+  <!-- bootstrap icons -->
+  <link rel="stylesheet" href="css/bootstrap-icons/bootstrap-icons.css">
 </head>
 
 <body>
@@ -22,15 +51,15 @@
     <a href="index.html" class="logo"><img src="img/logo.svg" alt="" class="logo" /></a>
     <nav>
       <ul id="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="dashboard.php">Home</a></li>
+        <li><a href="shop.php" class="active">Shop</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li id="lg-bag">
-          <a href="cart.html"><i class="fa fa-bag-shopping"></i></a>
+          <a href="cart.php"><i class="bi bi-cart"></i></a>
         </li>
-        <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+        <a href="#" id="close"><i class="bi bi-x-circle-fill"></i></a>
       </ul>
     </nav>
     <div id="mobile">
@@ -44,14 +73,14 @@
   <!-- ===================== -->
   <section id="prodetails" class="section-p1">
     <div class="single-pro-image">
-      <img src="img/products/f1.jpg" width="100%" id="MainImg" alt="" />
+      <img src="img/products/<?=$selected_product['img']; ?> " width="100%" id="MainImg" alt="" />
 
       <div class="small-img-group">
         <div class="small-img-col">
-          <img src="img/products/f1.jpg" width="100%" class="small-img" alt="" />
+          <img src="img/products/<?=$selected_product['img']; ?>" width="100%" class="small-img" alt="" />
         </div>
         <div class="small-img-col">
-          <img src="img/products/f2.jpg" width="100%" class="small-img" alt="" />
+          <img src="img/products/look1-<?=$selected_product['img']; ?>" width="100%" class="small-img" alt="" />
         </div>
         <div class="small-img-col">
           <img src="img/products/f3.jpg" width="100%" class="small-img" alt="" />
@@ -64,25 +93,28 @@
 
     <div class="single-pro-details">
       <h6>Home / Shirt</h6>
-      <h4>Men's Fashion Shirt</h4>
-      <h2>400 EGP</h2>
-      <select>
-        <option>Select Size</option>
-        <option>Small</option>
-        <option>Medium</option>
-        <option>Large</option>
-        <option>XL</option>
-        <option>XXL</option>
-      </select>
-      <input type="number" value="1" />
-      <button class="normal">Add To cart</button>
+      <h4><?=$selected_product['productName']; ?> </h4>
+      <h2>$ <?=$selected_product['productPrice']; ?> </h2>
+      <form action="addToCart.php" method="POST">
+
+        <!-- Hidden inputs for other item details -->
+        <input type="hidden" name="productId" value="<?=$selected_product['productId']; ?>">
+        <input type="hidden" name="productName" value="<?=$selected_product['productName']; ?>">
+        <input type="hidden" name="productPrice" value="<?=$selected_product['productPrice']; ?>">
+        
+        <select name="selectedSize" required>
+          <option value="">Select Size</option>
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+        <input type="number" value="1" name="numberOfItem" />
+        <button  type="submit" name="submit" class="normal"><i class="bi bi-cart" style="margin-right: 10px"></i>Add To cart</button>
+      </form>
       <h4>Product Details</h4>
-      <span>The Gildan Ultra Cotton Shirt is made from a substontial 6.0 oz. per
-        sq. yd. fabric constructed from 100% cotton. This classic fit
-        preshrunk jersey knit provides unmatched comfort with each wear.
-        Featuring a toped neck and shoulder, and a seemless double-needle
-        collar, and available in a range of colors, it offers it all in the
-        ultimate head- turning package.</span>
+      <span><?=$selected_product['productDetails']; ?></span>
     </div>
   </section>
 
@@ -90,70 +122,28 @@
     <h2>Featured Products</h2>
     <p class="heading">Summer Collection New Modern Design</p>
     <div class="pro-container">
-      <div class="pro">
-        <img src="img/products/n1.jpg" alt="" />
-        <div class="des">
-          <span>H&M</span>
-          <h5>Regular Fit shirt</h5>
-          <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>
-            <i class="fa-regular fa-star"></i>
-          </div>
-          <h4>279 EGP</h4>
-          <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-        </div>
-      </div>
-      <div class="pro">
-        <img src="img/products/n2.jpg" alt="" />
-        <div class="des">
-          <span>LC WAIKIKI</span>
-          <h5>Classic Sleeved Shirt</h5>
-          <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-          </div>
-          <h4>230 EGP</h4>
-          <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-        </div>
-      </div>
-      <div class="pro">
-        <img src="img/products/n3.jpg" alt="" />
-        <div class="des">
-          <span>H&M</span>
-          <h5>Regular Fit Cotton shirt</h5>
-          <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>
-          </div>
-          <h4>350 EGP</h4>
-          <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-        </div>
-      </div>
-      <div class="pro">
-        <img src="img/products/n4.jpg" alt="" />
-        <div class="des">
-          <span>POLO</span>
-          <h5>Polo T-Shirt</h5>
-          <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>
-            <i class="fa-regular fa-star"></i>
-          </div>
-          <h4>285 EGP</h4>
-          <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-        </div>
-      </div>
+
+
+          <?php while($product = mysqli_fetch_assoc($ft_query_run)){ ?>
+            <div class="pro" onclick="window.location.href='sproduct.php?productId=<?=$product['productId']; ?> ';">
+                <img src=" img/products/<?=$product['img']; ?>" alt="">
+                <div class="des">
+                    <span> <?=$product['productLabel']; ?> </span>
+                    <h5 id="productName"><?=$product['productName']; ?></h5>
+                    <div class="star">
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star-half"></i>
+                    </div>
+                    <h4>$ <?=$product['productPrice']; ?></h4>
+                    <a href="#"><i class="bi bi-cart"></i></a>
+                </div>
+            </div>
+          <?php } ?>
+
+
     </div>
   </section>
 
