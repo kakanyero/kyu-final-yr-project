@@ -2,7 +2,7 @@
     $host = 'localhost';    // Host
     $user = 'root';         // User name
     $pswd = '';             // User password
-    $db = 'ecommerce';      // Database Name
+    $db = 'inventory';      // Database Name
 
     // Making a connection to the database
     $conn = mysqli_connect($host, $user, $pswd, $db);
