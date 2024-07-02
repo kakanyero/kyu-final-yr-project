@@ -160,7 +160,7 @@
                 <input type="hidden" name="grandTotal" value="<?=$cartTotal; ?>">
                 <!-- <input type="hidden" name="orderId" value=""> -->
 
-                <button type="submit" name="checkout" class="normal">Proceed to checkout</button>
+                <button  id="checkout" type="submit" name="checkout" class="normal" >Proceed to checkout</button>
             </form>
         </div>
     </section>
@@ -217,7 +217,7 @@
     <!-- ============================================================================================================ -->
     <!-- <script src="script.js"></script> -->
 
-
+<script src="cart.js"></script>
 </body>
 
 </html>
