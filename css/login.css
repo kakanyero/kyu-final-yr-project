@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: white;
+    background-color: rgb(107, 103, 103);
     background-image: url('img/banner/b2.jpg');
     color: #373E49;
 }
