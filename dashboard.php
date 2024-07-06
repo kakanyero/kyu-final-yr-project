@@ -254,10 +254,10 @@
         </div>
         <div class="col">
             <h4>My Account</h4>
-            <a href="login.html">Sign In</a>
+            <a href="signup.php">Sign In</a>
             <a href="cart.html">View Cart</a>
             <a href="#">My Wishlist</a>
-            <a href="#">Track My Order</a>
+            <a href="shop.php">Track My Order</a>
             <a href="#">Help</a>
         </div>
         <div class="col install">
