@@ -49,7 +49,7 @@
             </ul>
         </nav>
         <div id="mobile">
-            <a href="cart.html"><i class="fa fa-bag-shopping"></i></a>
+            <a href="cart.php"><i class="fa fa-bag-shopping"></i></a>
             <i id="bar" class="fas fa-outdent"></i>
 
         </div>
@@ -64,7 +64,7 @@
         <h2>Super value deals</h2>
         <h1>On all products</h1>
         <p>Save more with coupons & up to 70% off!</p>
-        <button >Shop Now</button>
+        <button onclick="window.location.href='shop.php'">Shop Now</button>
     </section>
     <!-- ===================== -->
     <!--    Features Section   -->

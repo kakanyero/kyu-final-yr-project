@@ -17,7 +17,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>E-Commerce</title>
+  <title>Fine spinners Uganda Limitted</title>
   <!-- Font Awesome Library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
   <!-- <link rel="stylesheet" href="css/all.min.css" /> -->
@@ -54,7 +54,7 @@
   <!-- ===================== -->
 
   <section id="page-header">
-    <h2>#shopfromhome</h2>
+    <h2>Shop From Home</h2>
 
     <p>Save more with coupons & up to 70% off!</p>
   </section>
@@ -155,7 +155,7 @@
       <img src="img/pay/pay.png" alt="" />
     </div>
     <div class="copyright">
-      <p>&copy; 2022, Web Development Project - Group18</p>
+      <p>&copy; 2024, Fine spinners Uganda Limitted</p>
     </div>
   </footer>
   <!-- ============================================================================================================ -->
