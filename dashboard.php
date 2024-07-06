@@ -271,7 +271,7 @@
             <img src="img/pay/pay.png" alt="">
         </div>
         <div class="copyright">
-            <p>&copy; 2024, ALX SOFTWARE ENGINEERING PROJECT </p>
+            <p>&copy; 2024, Fine spinners Uganda Limitted </p>
         </div>
     </footer>
     <!-- ============================================================================================================ -->

@@ -36,7 +36,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>E-Commerce</title>
+  <title>Fine Spinners Uganda Ltd</title>
   <!-- Font Awesome Library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
   <!-- <link rel="stylesheet" href="css/all.min.css" /> -->
@@ -63,7 +63,7 @@
       </ul>
     </nav>
     <div id="mobile">
-      <a href="cart.html"><i class="fa fa-bag-shopping"></i></a>
+      <a href="cart.php"><i class="fa fa-bag-shopping"></i></a>
       <i id="bar" class="fas fa-outdent"></i>
     </div>
   </header>
