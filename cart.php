@@ -197,8 +197,8 @@
             <a href="sign up.html">Sign In</a>
             <a href="cart.html">View Cart</a>
             <a href="#">My Wishlist</a>
-            <a href="#">Track My Order</a>
-            <a href="#">Help</a>
+            <a href="cart.php">Track My Order</a>
+            <a href="contact.html">Help</a>
         </div>
         <div class="col install">
             <h4>Install App</h4>
