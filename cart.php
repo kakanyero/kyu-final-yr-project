@@ -160,7 +160,7 @@
                 <input type="hidden" name="grandTotal" value="<?=$cartTotal; ?>">
                 <!-- <input type="hidden" name="orderId" value=""> -->
 
-                <button  id="checkout" type="submit" name="checkout" class="normal" >Proceed to checkout</button>
+                <button  id="checkout" type="submit" name="checkout" class="normal" onclick="window.location.href='checkout.html'" >Proceed to checkout</button>
             </form>
         </div>
     </section>
@@ -195,7 +195,7 @@
         <div class="col">
             <h4>My Account</h4>
             <a href="sign up.html">Sign In</a>
-            <a href="cart.html">View Cart</a>
+            <a href="cart.php">View Cart</a>
             <a href="#">My Wishlist</a>
             <a href="cart.php">Track My Order</a>
             <a href="contact.html">Help</a>
