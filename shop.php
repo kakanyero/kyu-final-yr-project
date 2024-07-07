@@ -138,11 +138,11 @@
     </div>
     <div class="col">
       <h4>My Account</h4>
-      <a href="#">Sign In</a>
-      <a href="#">View Cart</a>
+      <a href="signup.php">Sign In</a>
+      <a href="cart.php">View Cart</a>
       <a href="#">My Wishlist</a>
-      <a href="#">Track My Order</a>
-      <a href="#">Help</a>
+      <a href="csrt.php">Track My Order</a>
+      <a href="about.html">Help</a>
     </div>
     <div class="col install">
       <h4>Install App</h4>

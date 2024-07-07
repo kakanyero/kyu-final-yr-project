@@ -111,11 +111,11 @@
                                 <img src="img/products/<?=$productImage; ?>">
                             </span></td>
                             <td><?=$cartItem['productName']; ?> </td>
-                            <td>$ <?=$cartItem['productPrice']; ?></td>
+                            <td>Ugx <?=$cartItem['productPrice']; ?></td>
                             <td>
                                 <input type="number" id="currentItemCount" value="<?=$cartItem['numberOfItems']; ?>" style="font-size: 25px; margin: 0 10px;  border: 1px"></input> 
                             </td>
-                            <td>$ <?=$cartItem['totalCost']; ?></td>
+                            <td>Ugx <?=$cartItem['totalCost']; ?></td>
                         </tr>
 
                         
@@ -145,7 +145,7 @@
             <table>
                 <tr>
                     <td>Subtotal</td>
-                    <td>$ <?php echo $cartTotal; ?></td>
+                    <td>Ugx <?php echo $cartTotal; ?></td>
                 </tr>
                 <tr>
                     <td>Number of Items</td>
@@ -153,7 +153,7 @@
                 </tr>
                 <tr>
                     <td><strong>Total</strong></td>
-                    <td><strong>$ <?=$cartTotal; ?></strong></td>
+                    <td><strong>Ugx <?=$cartTotal; ?></strong></td>
                 </tr>
             </table>
             <form action="checkout/checkout.php" method="post">

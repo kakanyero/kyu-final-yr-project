@@ -117,7 +117,7 @@
                         <i class="bi bi-star"></i>
                         <i class="bi bi-star-half"></i>
                     </div>
-                    <h4>$ <?=$products['productPrice']; ?></h4>
+                    <h4>Ugx <?=$products['productPrice']; ?></h4>
                     <a href="#"><i class="fa-solid bi bi-cart-fill cart"></i></a>
                 </div>
             </div>
@@ -144,7 +144,7 @@
             
                 <!-- Fetching new arrivals from database -->
             <?php while($newProducts = mysqli_fetch_assoc($arrival_time_query_run)){ ?>
-            <div class="pro" onclick="window.location.href='sproduct.html';">
+            <div class="pro" onclick="window.location.href='sproduct.php?productId=<?=$newProducts['productId'];?>';">
                 <img src=" img/products/<?=$newProducts['img']; ?>" alt="">
                 <div class="des">
                     <span> <?=$newProducts['productLabel']; ?> </span>
@@ -156,7 +156,7 @@
                         <i class="bi bi-star"></i>
                         <i class="bi bi-star-half"></i>
                     </div>
-                    <h4>$ <?=$newProducts['productPrice']; ?></h4>
+                    <h4>Ugx <?=$newProducts['productPrice']; ?></h4>
                     <a href="#"><i class="fa-solid bi bi-cart-fill cart"></i></a>
                 </div>
             </div>
