@@ -77,7 +77,7 @@
                     <i class="bi bi-star"></i>
                     <i class="bi bi-star-half"></i>
                 </div>
-                <h4>$ <?=$products['productPrice']; ?></h4>
+                <h4>Ugx <?=$products['productPrice']; ?></h4>
                 <a href="#"><i class="fa-solid bi bi-cart-fill cart"></i></a>
             </div>
         </div>

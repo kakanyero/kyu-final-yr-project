@@ -123,7 +123,7 @@
                 <tr>
                     <td colspan=5 style="padding: 30px 10px; text-align:left"><span style="font-size: 20px; color: teal;"><b>Sub Total</b></span></td>
                     
-                    <td><span style="font-size: 20px; color: teal;"><b>$ <?php echo $cartTotal; ?></b></span></td>
+                    <td><span style="font-size: 20px; color: teal;"><b>Ugx <?php echo $cartTotal; ?></b></span></td>
                 </tr>
             </tbody>
         </table>

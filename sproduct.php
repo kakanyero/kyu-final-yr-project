@@ -94,7 +94,7 @@
     <div class="single-pro-details">
       <h6>Home / Shirt</h6>
       <h4><?=$selected_product['productName']; ?> </h4>
-      <h2>$ <?=$selected_product['productPrice']; ?> </h2>
+      <h2>Ugx <?=$selected_product['productPrice']; ?> </h2>
       <form action="addToCart.php" method="POST">
 
         <!-- Hidden inputs for other item details -->
@@ -137,7 +137,7 @@
                         <i class="bi bi-star"></i>
                         <i class="bi bi-star-half"></i>
                     </div>
-                    <h4>$ <?=$product['productPrice']; ?></h4>
+                    <h4>Ugx <?=$product['productPrice']; ?></h4>
                     <a href="#"><i class="bi bi-cart"></i></a>
                 </div>
             </div>
